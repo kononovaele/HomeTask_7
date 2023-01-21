@@ -51,9 +51,9 @@ int[] GetConvertStrArrayToArrayInt(string[] wordsOfNumbers)
     return array;
 }
 
-// Конвертирует массив строк целых чисел в массив целых чисел
-// Пример: string "11 -2 77 90 101 -44" => int[11 -2 77 90 101 -44]
-// Возвращает массив целых чисел
+// Создает, заполняет и возвращает матрицу вещественых чисел
+// На входе размер матрицы row на col
+// Возвращает матрицу вещественных чисел
 double[,] GetMatrixDouble(int row, int col)
 {
     double[,] matrix = new double[row, col];
@@ -71,6 +71,8 @@ double[,] GetMatrixDouble(int row, int col)
     return matrix;
 }
 
+// Печать матрицы вещественных чисел
+// На входе размер матрицы row на col и сама матрица matrix
 void PrintMatrix(int row, int col, double[,] matrix)
 {
     Console.WriteLine($"\nYou craete matrix. Size matriz is: {row} x {col}");
@@ -83,11 +85,6 @@ void PrintMatrix(int row, int col, double[,] matrix)
         }
     }
     Console.WriteLine("\n");
-}
-
-void PrintRezult(double sum)
-{
-    Console.WriteLine($"\n Count of digits bigger than zero is: {sum}");
 }
 
 void main()
@@ -108,20 +105,16 @@ void main()
     // Конвертируем массив строк в массив целых числех
     int[] arrayOfDigits = GetConvertStrArrayToArrayInt(wordsOfNumbers);
 
+    // Вытащим размер матрицы из массива целых
     int row = arrayOfDigits[0];
     int col = arrayOfDigits[1];
+
     // Создать квадратную матрицу вещественных чисел и заполнить ее
     double[,] matrix = GetMatrixDouble(row, col);
 
     // Печатаем матрицу
     PrintMatrix(row, col, matrix);
 
-    // Получим количество чисел больше нуля из массива целых чисел
-    //int countDigitsBiggerZero = GetCountDigitsBiggerZero(row, col, matrix);
-    //double sum = 0.0;
-
-    // Печатаем результат (красиво), количество введенных чисел больше нуля
-    //PrintRezult(sum);
 }
 
 main();
