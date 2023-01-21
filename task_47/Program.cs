@@ -73,14 +73,16 @@ double[,] GetMatrixDouble(int row, int col)
 
 void PrintMatrix(int row, int col, double[,] matrix)
 {
+    Console.WriteLine($"\nYou craete matrix. Size matriz is: {row} x {col}");
     for(int i = 0; i < row; ++i)
     {
-        Console.WriteLine("");
+        Console.WriteLine();
         for(int j = 0; j < col; ++j)
         {
             Console.Write("{0,8:N3}  ", matrix[i, j]);
         }
     }
+    Console.WriteLine("\n");
 }
 
 void PrintRezult(double sum)
@@ -116,10 +118,10 @@ void main()
 
     // Получим количество чисел больше нуля из массива целых чисел
     //int countDigitsBiggerZero = GetCountDigitsBiggerZero(row, col, matrix);
-    double sum = 0.0;
+    //double sum = 0.0;
 
     // Печатаем результат (красиво), количество введенных чисел больше нуля
-    PrintRezult(sum);
+    //PrintRezult(sum);
 }
 
 main();
