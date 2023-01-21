@@ -54,7 +54,7 @@ int[] GetConvertStrArrayToArrayInt(string[] wordsOfNumbers)
     return array;
 }
 
-// Сщздает и возвращает матрицу целых чисел, размером row на col
+// Создает и возвращает матрицу целых чисел, размером row на col
 // Возвращает матрицу целых чисел
 int[,] GetMatrixInt(int row, int col)
 {
